@@ -5,14 +5,9 @@ requires = [
 ]
 build-backend = "setuptools.build_meta"
 
-[tool.pytest.ini_options]
-addopts = "--cov=cfec"
-testpaths = [
-    "tests",
-]
 
 [tool.mypy]
-mypy_path = "src"
+mypy_path = "wslpath"
 check_untyped_defs = true
 disallow_any_generics = true
 ignore_missing_imports = true
