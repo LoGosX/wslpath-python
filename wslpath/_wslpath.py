@@ -1,5 +1,5 @@
 import subprocess
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 from typing import Union
 
 
@@ -53,4 +53,5 @@ def wslpath(path: Union[str, Path], *,
     if isinstance(path, str):
         return output
     else:
-        return Path(output)
+        # WindowsPath cannot be initialized on non-Windows system
+        return PureWindowsPath(output) if from_wsl_path_to_windows_path else Path(output)
