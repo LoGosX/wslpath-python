@@ -23,12 +23,12 @@ pip install wslpath-python
 ```python
 >>> from wslpath import wslpath
 >>>
->>> wslpath(r'C:\Users\macie\')
-'/mnt/c/Users/macie/'
+>>> wslpath(r'C:\Users\macie')
+'/mnt/c/Users/macie'
 >>>
 >>> from pathlib import Path
->>> wslpath(Path(r'C:\Users\macie\'))
-PosixPath('/mnt/c/Users/macie/')
+>>> wslpath(Path(r'C:\Users\macie'))
+PosixPath('/mnt/c/Users/macie')
 >>>
 >>> wslpath('.')
 '.'
