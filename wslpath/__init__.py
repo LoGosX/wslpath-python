@@ -1,4 +1,4 @@
-from ._wslpath import _wslpath as wslpath
+from ._wslpath import wslpath
 
 __all__ = [
     'wslpath'
