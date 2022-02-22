@@ -23,15 +23,15 @@ pip install wslpath-python
 ```python
 >>> from wslpath import wslpath
 >>>
->>> wslpath(r'C:\Users\macie\PycharmProjects\wslpath-python')
-'/mnt/c/Users/macie/PycharmProjects/wslpath-python'
+>>> wslpath(r'C:\Users\macie\')
+'/mnt/c/Users/macie/'
 >>>
 >>> from pathlib import Path
->>> wslpath(Path(r'C:\Users\macie\PycharmProjects\wslpath-python'))
-PosixPath('/mnt/c/Users/macie/PycharmProjects/wslpath-python')
+>>> wslpath(Path(r'C:\Users\macie\'))
+PosixPath('/mnt/c/Users/macie/')
 >>>
 >>> wslpath('.')
 '.'
 >>> wslpath('.', force_absolute_path=True)
-'/mnt/c/Users/macie/PycharmProjects/wslpath-python/'
+'/mnt/c/Users/macie/'
 ```
