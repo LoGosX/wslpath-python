@@ -3,7 +3,7 @@
 
 This is a simple Python wrapper around `wslpath` command found in *Windows Subsystem for Linux* (WSL) environment.
 
-This package contains a single function `wslpath` that calls the `wslpath` command with appropiate arguments.
+This package contains a single function `wslpath` that calls the `wslpath` command with appropriate arguments.
 
 ## Requirements
 Tha package has no additional requirements. Developed and tested in Python 3.9, but it should work in Python 3.5 and above.

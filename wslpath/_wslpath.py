@@ -19,7 +19,11 @@ def wslpath(path: Union[str, Path], *,
         from_wsl_path_to_windows_path: Translate WSL path to a Windows path
         use_forward_slash: Use '/' instead of backslash in Windows path.
             Only used if from_wsl_path_to_windows_path is True.
+
+    Returns:
+        A translated path of the same type as 'path' argument.
     """
+
     if not (isinstance(path, str) or isinstance(path, Path)):
         raise ValueError(
             f"{path} must be 'str' or 'pathlib.Path' instance"
