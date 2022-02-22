@@ -1,4 +1,6 @@
-[![flake8](https://github.com/LoGosX/wslpath-python/actions/workflows/flake8.yml/badge.svg)](https://github.com/LoGosX/wslpath-python/actions/workflows/flake8.yml) [![mypy](https://github.com/LoGosX/wslpath-python/actions/workflows/mypy.yml/badge.svg)](https://github.com/LoGosX/wslpath-python/actions/workflows/mypy.yml)
+[![flake8](https://github.com/LoGosX/wslpath-python/actions/workflows/flake8.yml/badge.svg)](https://github.com/LoGosX/wslpath-python/actions/workflows/flake8.yml)
+[![mypy](https://github.com/LoGosX/wslpath-python/actions/workflows/mypy.yml/badge.svg)](https://github.com/LoGosX/wslpath-python/actions/workflows/mypy.yml)
+[![PyPI version](https://badge.fury.io/py/wslpath-python.svg)](https://badge.fury.io/py/wslpath-python)
 # wslpath-python
 
 This is a simple Python wrapper around `wslpath` command found in *Windows Subsystem for Linux* (WSL) environment.
