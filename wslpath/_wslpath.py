@@ -1,12 +1,12 @@
 import subprocess
-from pathlib import Path, PureWindowsPath
+from pathlib import Path, PureWindowsPath, PurePath
 from typing import Union
 
 
 def wslpath(path: Union[str, Path], *,
             force_absolute_path: bool = False,
             from_wsl_path_to_windows_path: bool = False,
-            use_forward_slash: bool = False) -> Union[str, Path]:
+            use_forward_slash: bool = False) -> Union[str, Path, PurePath]:
     """
     Translates Windows path to WSL path
 
@@ -21,7 +21,9 @@ def wslpath(path: Union[str, Path], *,
             Only used if from_wsl_path_to_windows_path is True.
 
     Returns:
-        A translated path of the same type as 'path' argument.
+        A translated path. String if path is a string. Path if path is
+            Path instance, or PureWindowsPath if path is a Path and
+            if translating from wsl path to windows path
     """
 
     if not (isinstance(path, str) or isinstance(path, Path)):
@@ -54,4 +56,7 @@ def wslpath(path: Union[str, Path], *,
         return output
     else:
         # WindowsPath cannot be initialized on non-Windows system
-        return PureWindowsPath(output) if from_wsl_path_to_windows_path else Path(output)
+        if from_wsl_path_to_windows_path:
+            return PureWindowsPath(output)
+        else:
+            return Path(output)
